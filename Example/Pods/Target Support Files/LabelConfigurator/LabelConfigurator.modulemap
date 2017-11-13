@@ -1,6 +1,0 @@
-framework module LabelConfigurator {
-  umbrella header "LabelConfigurator-umbrella.h"
-
-  export *
-  module * { export * }
-}
