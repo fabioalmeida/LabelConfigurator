@@ -7,12 +7,21 @@
 //
 
 import UIKit
+import LabelConfigurator
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var myLabel: UILabel!
+
     override func viewDidLoad() {
+
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        self.myLabel.setLabelText("Sed ut perspiciatis unde omnis iste natus error")
+                    .set(font: UIFont.boldSystemFont(ofSize: 30))
+                    .set(textColor: .blue)
+                    .set(lineSpacing: 6)
+                    .configure()
     }
 
     override func didReceiveMemoryWarning() {

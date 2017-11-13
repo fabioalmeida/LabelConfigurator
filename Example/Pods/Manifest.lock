@@ -16,7 +16,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
-  LabelConfigurator: 3ea6aa21fdd2290bddd11e1a931aebe423f18126
+  LabelConfigurator: 7afa39dd70d2ca6cd0e0c2627dc75bf4951494ec
 
 PODFILE CHECKSUM: 028175fdb2b1dc7b0ef50bc8246d9893391493c2
 
