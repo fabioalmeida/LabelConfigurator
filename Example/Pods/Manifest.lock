@@ -4,7 +4,7 @@ PODS:
   - FBSnapshotTestCase/Core (2.1.4)
   - FBSnapshotTestCase/SwiftSupport (2.1.4):
     - FBSnapshotTestCase/Core
-  - LabelConfigurator (0.1.0)
+  - LabelConfigurator (0.1.1)
 
 DEPENDENCIES:
   - FBSnapshotTestCase (~> 2.1.4)
@@ -16,7 +16,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
-  LabelConfigurator: 7afa39dd70d2ca6cd0e0c2627dc75bf4951494ec
+  LabelConfigurator: dd59f2a41b3b89d056f8da866c0ad435caf192df
 
 PODFILE CHECKSUM: 028175fdb2b1dc7b0ef50bc8246d9893391493c2
 
