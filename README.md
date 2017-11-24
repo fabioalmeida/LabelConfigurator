@@ -121,7 +121,7 @@ self.myLabel.setLabelText("New price \(oldPrice) \(newPrice)")
             .set(textColor: .black)
             .set(textColor: .red, onSubstring: newPrice)
             .set(textColor: .lightGray, onSubstring: oldPrice)
-            .set(attribute: NSStrikethroughStyleAttributeName, value: NSNumber(value: 1), onSubstring: oldPrice)
+            .set(attribute: NSAttributedStringKey.strikethroughStyle, value: 1, onSubstring: oldPrice)
             .configure()
 ```
 
