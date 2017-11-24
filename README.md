@@ -32,7 +32,7 @@ platform :ios, '9.0'
 use_frameworks!
 
 target 'TargetName' do
-  pod 'LabelConfigurator', '~> 0.2.0'
+  pod 'LabelConfigurator', '~> 0.3.0'
 end
 ```
 
@@ -46,7 +46,7 @@ After specifying the new dependency on the Podfile, just run `pod install` to ma
 To integrate `LabelConfigurator` into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```ogdl
-github "fabioameida/LabelConfigurator" ~> 0.2.0
+github "fabioameida/LabelConfigurator" ~> 0.3.0
 ```
 
 Run `carthage update` to build the framework and drag the built `LabelConfigurator.framework` into your Xcode project.
