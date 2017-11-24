@@ -107,8 +107,8 @@ The most common customisations done on `UILabels` are covered with helper method
 However, not all the possibilities are covered (and we want to keep it that way) on `UILabel` attributes and also `NSAttributedString`.
 
 The good this is that you can add your custom attributes you wanted to add to your `NSAttributedString` using two convenience methods to do so:
-- `func set(attribute: String, value: AnyObject, onSubstring substring: String)`
-- `func set(attribute: String, value: AnyObject, onRange range: NSRange)`
+- `func set(attribute: NSAttributedStringKey, value: Any, onSubstring substring: String)`
+- `func set(attribute: NSAttributedStringKey, value: Any, onRange range: NSRange)`
 
 For example, if you want to add a strikethrough attribute to a substring on your `UILabel`, you can do as the following
 
