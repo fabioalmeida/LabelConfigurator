@@ -32,7 +32,7 @@ platform :ios, '9.0'
 use_frameworks!
 
 target 'TargetName' do
-  pod 'LabelConfigurator', '~> 0.2.0'
+  pod 'LabelConfigurator', '~> 0.3.0'
 end
 ```
 
@@ -46,7 +46,7 @@ After specifying the new dependency on the Podfile, just run `pod install` to ma
 To integrate `LabelConfigurator` into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```ogdl
-github "fabioameida/LabelConfigurator" ~> 0.2.0
+github "fabioameida/LabelConfigurator" ~> 0.3.0
 ```
 
 Run `carthage update` to build the framework and drag the built `LabelConfigurator.framework` into your Xcode project.
@@ -107,8 +107,8 @@ The most common customisations done on `UILabels` are covered with helper method
 However, not all the possibilities are covered (and we want to keep it that way) on `UILabel` attributes and also `NSAttributedString`.
 
 The good this is that you can add your custom attributes you wanted to add to your `NSAttributedString` using two convenience methods to do so:
-- `func set(attribute: String, value: AnyObject, onSubstring substring: String)`
-- `func set(attribute: String, value: AnyObject, onRange range: NSRange)`
+- `func set(attribute: NSAttributedStringKey, value: Any, onSubstring substring: String)`
+- `func set(attribute: NSAttributedStringKey, value: Any, onRange range: NSRange)`
 
 For example, if you want to add a strikethrough attribute to a substring on your `UILabel`, you can do as the following
 
@@ -121,7 +121,7 @@ self.myLabel.setLabelText("New price \(oldPrice) \(newPrice)")
             .set(textColor: .black)
             .set(textColor: .red, onSubstring: newPrice)
             .set(textColor: .lightGray, onSubstring: oldPrice)
-            .set(attribute: NSStrikethroughStyleAttributeName, value: NSNumber(value: 1), onSubstring: oldPrice)
+            .set(attribute: NSAttributedStringKey.strikethroughStyle, value: 1, onSubstring: oldPrice)
             .configure()
 ```
 

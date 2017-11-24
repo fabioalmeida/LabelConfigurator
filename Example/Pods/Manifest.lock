@@ -1,5 +1,5 @@
 PODS:
-  - LabelConfigurator (0.1.2)
+  - LabelConfigurator (0.3.0)
 
 DEPENDENCIES:
   - LabelConfigurator (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  LabelConfigurator: 0f5235e9a35927dc55233ce511031c4f6f1dbc58
+  LabelConfigurator: 39ff7b3dcdb2a78945a68ab34650a8f6ca833965
 
 PODFILE CHECKSUM: 08e5c5bb7cf9dbc2a1d76bd7b3cf459830a63839
 

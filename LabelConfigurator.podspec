@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'LabelConfigurator'
-  s.version          = '0.2.0'
+  s.version          = '0.3.0'
   s.summary          = 'The most simple way to configure your UILabels in one go'
   s.description      = <<-DESC
 The most simple way to configure your UILabels in one go.
@@ -16,7 +16,7 @@ It also helps on the hard task of adding different style to substrings.
   s.social_media_url = 'https://twitter.com/fabioacalmeida'
 
   s.ios.deployment_target = '9.0'
-  s.pod_target_xcconfig = { 'SWIFT_VERSION' => '3.0' }
+  s.pod_target_xcconfig = { 'SWIFT_VERSION' => '4.0' }
 
   s.source_files = 'LabelConfigurator/Classes/**/*'
 end
