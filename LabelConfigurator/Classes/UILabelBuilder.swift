@@ -117,7 +117,7 @@ open class UILabelBuilder: NSObject {
 
     @discardableResult
     @objc(setAttribute:value:onSubstring:)
-    open func set(attribute: NSAttributedStringKey, value: Any, onSubstring substring: String) -> UILabelBuilder {
+    open func set(attribute: NSAttributedString.Key, value: Any, onSubstring substring: String) -> UILabelBuilder {
      
         self.attributedStringBuilder.set(attribute: attribute, value: value, onSubstring: substring)
         self.shouldSetAttributedText = true
@@ -126,7 +126,7 @@ open class UILabelBuilder: NSObject {
 
     @discardableResult
     @objc(setAttribute:value:onRange:)
-    open func set(attribute: NSAttributedStringKey, value: Any, onRange range: NSRange) -> UILabelBuilder {
+    open func set(attribute: NSAttributedString.Key, value: Any, onRange range: NSRange) -> UILabelBuilder {
 
         self.attributedStringBuilder.set(attribute: attribute, value: value, onRange: range)
         self.shouldSetAttributedText = true
