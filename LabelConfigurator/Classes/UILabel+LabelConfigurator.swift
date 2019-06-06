@@ -10,7 +10,7 @@ import Foundation
 
 public extension UILabel {
 
-    public func setLabelText(_ text: String?) -> UILabelBuilder {
+    func setLabelText(_ text: String?) -> UILabelBuilder {
      
         return UILabelBuilder(withLabel: self, text: text ?? "")
     }

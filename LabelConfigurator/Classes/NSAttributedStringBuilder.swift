@@ -11,14 +11,14 @@ import Foundation
 private struct SubstringAttribute {
     
     let substring: String
-    let attribute: NSAttributedStringKey
+    let attribute: NSAttributedString.Key
     let value: Any
 }
 
 private struct RangeAttribute {
 
     let range: NSRange
-    let attribute: NSAttributedStringKey
+    let attribute: NSAttributedString.Key
     let value: Any
 }
 
@@ -90,19 +90,19 @@ open class NSAttributedStringBuilder: NSObject {
     @objc(setFont:onSubstring:)
     open func set(font: UIFont?, onSubstring substring: String?) -> NSAttributedStringBuilder {
         
-        return self.set(attribute: NSAttributedStringKey.font, value: font, onSubstring: substring)
+        return self.set(attribute: NSAttributedString.Key.font, value: font, onSubstring: substring)
     }
 
     @discardableResult
     @objc(setTextColor:onSubstring:)
     open func set(textColor color: UIColor?, onSubstring substring: String?) -> NSAttributedStringBuilder {
         
-        return self.set(attribute: NSAttributedStringKey.foregroundColor, value: color, onSubstring: substring)
+        return self.set(attribute: NSAttributedString.Key.foregroundColor, value: color, onSubstring: substring)
     }
 
     @discardableResult
     @objc(setAttribute:value:onSubstring:)
-    open func set(attribute: NSAttributedStringKey?, value: Any?, onSubstring substring: String?) -> NSAttributedStringBuilder {
+    open func set(attribute: NSAttributedString.Key?, value: Any?, onSubstring substring: String?) -> NSAttributedStringBuilder {
 
         if let attribute = attribute, let value = value, let substring = substring {
 
@@ -121,7 +121,7 @@ open class NSAttributedStringBuilder: NSObject {
 
     @discardableResult
     @objc(setAttribute:value:onRange:)
-    open func set(attribute: NSAttributedStringKey?, value: Any?, onRange range: NSRange) -> NSAttributedStringBuilder {
+    open func set(attribute: NSAttributedString.Key?, value: Any?, onRange range: NSRange) -> NSAttributedStringBuilder {
 
         if let attribute = attribute, let value = value {
 
@@ -151,17 +151,17 @@ private extension NSAttributedStringBuilder {
         
         if let textColor = self.textColor {
             
-            attributedString.addAttribute(NSAttributedStringKey.foregroundColor, value: textColor, range: fullRange)
+            attributedString.addAttribute(NSAttributedString.Key.foregroundColor, value: textColor, range: fullRange)
         }
         
         if let textFont = self.textFont {
             
-            attributedString.addAttribute(NSAttributedStringKey.font, value: textFont, range: fullRange)
+            attributedString.addAttribute(NSAttributedString.Key.font, value: textFont, range: fullRange)
         }
         
         if let fontTracking = self.fontTracking {
             
-            attributedString.addAttribute(NSAttributedStringKey.kern, value: fontTracking, range: fullRange)
+            attributedString.addAttribute(NSAttributedString.Key.kern, value: fontTracking, range: fullRange)
         }
 
         var paragraphStyle: NSMutableParagraphStyle?
@@ -184,7 +184,7 @@ private extension NSAttributedStringBuilder {
 
         if let paragraphStyle = paragraphStyle {
 
-            attributedString.addAttribute(NSAttributedStringKey.paragraphStyle, value: paragraphStyle, range: fullRange)
+            attributedString.addAttribute(NSAttributedString.Key.paragraphStyle, value: paragraphStyle, range: fullRange)
         }
         
         if let substringAttributes = self.substringAttributes {
